@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerTrack - Job Application Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>CareerTrack</h2>
+
+        <nav>
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Applications</a>
+            <a href="#">Interviews</a>
+            <a href="#">Saved Jobs</a>
+        </nav>
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="topbar">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Track and manage your job applications</p>
+            </div>
+
+            <button id="addJobBtn">+ Add Application</button>
+            <div id="jobModal" class="modal">
+    <div class="modal-content">
+        <h2>Add Job Application</h2>
+
+        <input type="text" id="companyInput" placeholder="Company name">
+
+        <input type="text" id="roleInput" placeholder="Job role">
+
+        <input type="date" id="dateInput">
+
+        <select id="statusInput">
+            <option value="Applied">Applied</option>
+            <option value="Interview">Interview</option>
+            <option value="Offer">Offer</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+
+        <div class="modal-buttons">
+            <button id="cancelBtn">Cancel</button>
+            <button id="saveJobBtn">Save Application</button>
+        </div>
+    </div>
+</div>
+        </header>
+
+
+        <!-- KPI Cards -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Total Applications</span>
+                <h2 id="totalApplications">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Interviews</span>
+                <h2 id="interviews">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Offers</span>
+                <h2 id="offers">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Rejected</span>
+                <h2 id="rejected">0</h2>
+            </div>
+
+        </section>
+
+
+        <!-- Applications -->
+        <section class="applications">
+
+            <div class="section-header">
+                <h2>Recent Applications</h2>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search applications..."
+                >
+            </div>
+
+            <div id="applicationList" class="application-list">
+                <!-- Applications will appear here using JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
